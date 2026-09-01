@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0d2238">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; connect-src 'none'; font-src 'self'; form-action 'none'; frame-src 'none'; img-src 'self' data:; media-src blob:; object-src 'none'; script-src 'self'; style-src 'self'; worker-src 'none'">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+  <title>Secure interview</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <noscript>This browser cannot run the secure interview. No interview data was created.</noscript>
+  <main id="shell" class="shell-card">
+    <h1>Secure interview</h1>
+    <p>Nothing is uploaded automatically. Unlock only on a private device.</p>
+    <label for="access-code">Access code</label>
+    <input id="access-code" type="password" inputmode="text" enterkeyhint="go" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Enter access code" aria-describedby="shell-status">
+    <div class="button-row">
+      <button id="toggle-code" type="button">Show access code</button>
+      <button id="unlock" type="button" class="primary">Unlock</button>
+    </div>
+    <p id="shell-status" role="status" aria-live="polite">Locked</p>
+  </main>
+  <div id="app" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; connect-src 'none'; font-src 'self'; form-action 'none'; frame-src 'none'; img-src 'self' data:; media-src blob:; object-src 'none'; script-src 'self'; style-src 'self'; worker-src 'none'">
+  <title>Offline encrypted interview reviewer</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell-card">
+    <h1>Offline encrypted interview reviewer</h1>
+    <p>Select the encrypted bundle and its separate receipt. Nothing is uploaded.</p>
+    <label for="bundle">Encrypted bundle</label><input id="bundle" type="file" accept=".json,.ract,application/json">
+    <label for="receipt">Plaintext receipt</label><input id="receipt" type="file" accept=".json,application/json">
+    <label for="review-code">Separate access code</label><input id="review-code" type="password" autocomplete="off">
+    <button id="open-review" type="button" class="primary">Verify and open locally</button>
+    <p id="review-status" role="status" aria-live="polite"></p>
+    <section id="review-results"></section>
+  </main>
+  <script type="module" src="./reviewer.js"></script>
+</body>
+</html>
